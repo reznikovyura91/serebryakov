@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container">
+  <main>
+    <div class="webcam-container">
+      <webcam [height]="500" [width]="500" *ngIf="camIsActive"></webcam>
+    </div>
+
+    <button mat-flat-button (click)="turnOnCamera()" [disabled]="camIsActive">
+      <i class="material-icons">videocam</i>
+      Включить камеру
+    </button>
+    <button mat-flat-button (click)="turnOffCamera()" [disabled]="!camIsActive">
+      <i class="material-icons">videocam_off</i>
+      Выключить камеру
+    </button>  
+  </main>
+</div>
